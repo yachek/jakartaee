@@ -7,6 +7,7 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            box-shadow: none;
         }
         body{
             font-family: 'Playfair Display', serif;
@@ -31,10 +32,9 @@
             display: flex;
             border-radius: 12px 0 0 12px;
         }
-        a {
+        a:link, a:visited,  a:hover, a:active {
             text-decoration: none;
-            margin: 10px;
-            width: 30px;
+            color: inherit;
         }
         .image img{
         height:50vh;
@@ -178,36 +178,27 @@
     <body>
         <section>
             <div class = "image">
-               <img src="https://www.meme-arsenal.com/memes/dd2d25cb5a518d3bcb8c58bd57fd692c.jpg">
+                <img src="https://www.meme-arsenal.com/memes/dd2d25cb5a518d3bcb8c58bd57fd692c.jpg">
             </div>
 
             <div class = "content">
-                <h2>About Me</h2>
+                <h2 id = "about_me">About Me</h2>
                 <span><!-- line here --></span>
                 <p><p>Web developer, student of IP-13mp, main programmer of our team</p>
                 <ul class = "links">
-                    <li><a href = "#">work</a></li>
+                    <li><a href = "https://github.com/yachek/jakartaee" target = "_blank">work</a></li>
                     <div class = "vertical-line"></div>
-                    <li><a href = "#">service</a></li>
-                    <div class = "vertical-line"></div>
-                    <li><a href = "#">contact</a></li>
-                </ul>
-                <ul class="icons">
-                    <a href="https://github.com/yachek" class = "fa fa-github"></a>
-                    <a href="https://gitlab.com/yachek008" class = "fa fa-gitlab"></a>
+                    <li><a href = "/lab1/">my group</a></li>
                 </ul>
                 <ul class = "icons">
                     <li>
-                        <i class = "fa fa-twitter"></i>
+                        <a href="https://github.com/yachek" target = "_blank"><i class = "fa fa-github"></i></a>
                     </li>
                     <li>
-                        <i class = "fa fa-facebook"></i>
+                        <a href="https://gitlab.com/yachek008" target = "_blank"><i class = "fa fa-gitlab"></i></a>
                     </li>
                     <li>
-                        <i class = "fa fa-github"></i>
-                    </li>
-                    <li>
-                        <i class = "fa fa-pinterest"></i>
+                        <a href="https://t.me/VeterokPeremen" target = "_blank"><i class = "fa fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
