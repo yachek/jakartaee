@@ -112,7 +112,7 @@ html {
       <img src="https://www.meme-arsenal.com/memes/dd2d25cb5a518d3bcb8c58bd57fd692c.jpg" alt="John" style="width:100%">
       <div class="container">
         <h2>Denis Shkurko</h2>
-        <p class="title">Main dolboeb</p>
+        <p class="title">Main engineer</p>
         <p>IP-13mp</p>
         <p><form action="/lab1/denis"><input class="button" type="submit" value="Contact"></form></p>
       </div>
