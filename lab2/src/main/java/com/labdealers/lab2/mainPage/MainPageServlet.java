@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.labdealers.controller;
+package com.labdealers.lab2.mainPage;
 
+import com.labdealers.lab2.items.Good;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author yache
  */
-public class YaroslaveServlet extends HttpServlet {
+public class MainPageServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,7 +31,16 @@ public class YaroslaveServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        RequestDispatcher rd = request.getRequestDispatcher("yaroslave.jsp");
+        request.setAttribute("page", "main");
+        ArrayList<Good> goods = new ArrayList<>();
+        goods.add(new Good("https://cdn.comfy.ua/media/catalog/product/cache/4/image/600x/9df78eab33525d08d6e5fb8d27136e95/_/2/_263_wb_1_.jpg", "Vestfrost CX263WB", 7999, 6999, "The Vestfrost CX263WB refrigerator will help you take care of the freshness of products and preserve the maximum amount of useful vitamins and minerals in their composition. This is a small unit that is ideal for a small kitchen. It can also be installed in the country, where you do not visit so often, but sometimes you need such equipment.", "Fridges"));
+        goods.add(new Good("https://cdn.comfy.ua/media/catalog/product/cache/4/image/600x/9df78eab33525d08d6e5fb8d27136e95/0/2/02_gw-b509smum_front_inverter_thinq.jpg", "LG GW-B509SMUM", 24999, 24999, "Оптимальная температура в зависимости от типа продукта. FRESHConverter представляет собой технологию, позволяющую выбирать оптимальный уровень температуры в зависимости от типа продукта, который сохраняется: мясо, рыба и овощи.", "Fridges"));
+        goods.add(new Good("https://cdn.comfy.ua/media/catalog/product/cache/4/image/600x/9df78eab33525d08d6e5fb8d27136e95/i/9/i9400f_1_1_.jpg", "Expert PC Ultimate", 40499, 34999, "Processor Manufacturer: Intel\nCPU Model: Core i5-10400F\nNumber of cores: 6 cores\nCPU frequency: 2.9 (4.3) GHz\nChipset: Intel B460", "Desktop computers"));
+        goods.add(new Good("https://cdn.comfy.ua/media/catalog/product/cache/4/image/600x/9df78eab33525d08d6e5fb8d27136e95/1/0/1088540_zoom_1_.jpg", "HP Laptop 15s-eq1042ua", 16499, 14999, "Screen Diagonal: 15.6''\nScreen Resolution: 1920x1080 Full HD\nMatrix type: IPS\nScreen Coating: Anti-Glare", "Laptops"));
+        
+        request.setAttribute("goods", goods);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
         rd.forward(request, response);
     }
 

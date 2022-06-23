@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.labdealers.controller;
+package com.labdealers.lab2.users;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author yache
  */
-public class YaroslaveServlet extends HttpServlet {
+public class UsersServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,7 +29,7 @@ public class YaroslaveServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        RequestDispatcher rd = request.getRequestDispatcher("yaroslave.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
         rd.forward(request, response);
     }
 

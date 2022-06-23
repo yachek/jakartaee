@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
@@ -170,7 +171,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>About Us card || Learning robo</title>
+        <title>About Me card</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/lab2" unpackWARs="true" antiResourceLocking="false"
+         docBase="${catalina.home}/webapps/lab2"/>
